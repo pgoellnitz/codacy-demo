@@ -14,6 +14,7 @@ export class TestComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    let y: any;
     const x = e_direct.production;
     console.log(x);
   }
