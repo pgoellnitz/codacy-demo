@@ -1,0 +1,16 @@
+name: codacy
+
+on: push
+
+jobs:
+  check:
+    name: Codacy Checks
+    runs-on: ubuntu-latest
+    container: codacy/codacy-analysis-cli
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+      - name: install deps
+        run: npm i ci --also:dev
+      - name: run codacy
+        run: codacy-analysis-cli analyze --project-token ${{ secrets.CODACY_PROJECT_TOKEN }} --upload
