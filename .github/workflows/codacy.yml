@@ -17,3 +17,5 @@ jobs:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           upload: true
           fail-if-incomplete: true
+          verbose: true
+          parallel: 10
