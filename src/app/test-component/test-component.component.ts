@@ -17,5 +17,6 @@ export class TestComponentComponent implements OnInit {
     let y: any;
     const x = e_direct.production;
     console.log(x);
+    let another_unused = 5;
   }
 }
