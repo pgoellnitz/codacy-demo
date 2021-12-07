@@ -12,7 +12,7 @@ jobs:
       - name: install deps
         run: npm i ci
       - name: Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@4.0.0
+        uses: codacy/codacy-analysis-cli-action@master
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           upload: true
